@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
+import fire from './fire';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = { messages : []};
+  }
+
+  componentWillMount(){
+    let messagesRef = fire.database().ref('messages').orderByKey
+  }
+
   return (
     <div className="App">
       <header className="App-header">
